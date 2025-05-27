@@ -1,0 +1,9 @@
+# .bash_profile_special
+
+# User specific environment and startup programs
+HOSTNAME=$(hostname -s); export HOSTNAME
+SHORTUSER=`echo $USER | sed -e "s/@corp.storebrand.no//" | sed -e "s/@common.storebrand.no//"`
+PS1='[$SHORTUSER@$HOSTNAME $PWD]\$ '; export PS1
+
+PATH=$PATH:$HOME/script
+export PATH

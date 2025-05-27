@@ -1,0 +1,18 @@
+# ./bash_tmux
+
+# Start tmux (attach if a detatched session exists, else start new session)
+# Skip if tmux isn't installed
+
+if [[ $(which tmux) ]]; then
+  if [[ -z "$TMUX" ]]; then
+    ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # Get the id of a detached session
+    if [[ -z "$ID" ]]; then # If not available create a new one
+      tmux new-session
+    else
+      tmux attach-session -t "$ID" # If available attach to it
+    fi
+  else
+    tmux rename-window -t 1 ${HOSTNAME^^}
+    if [[ -f "/etc/modt" ]]; then cat "/etc/motd";fi
+  fi
+fi
