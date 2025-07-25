@@ -1,5 +1,5 @@
 # Update userconfig
-alias upducfg='/mp/software/usercfg/upd_usercfg.sh'
+alias upducfg='./.usercfg.sh'
 
 # Print server status
 alias st='uptime; echo ..; dmesg -T | tail; echo ..; free -m; echo ..; ps aux --sort=-pcpu | head -n 10'

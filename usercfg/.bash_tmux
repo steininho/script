@@ -1,6 +1,6 @@
 # ./bash_tmux
 
-# Start tmux (attach if a detatched session exists, else start new session)
+# Start tmux (attach if a detached session exists, else start new session)
 # Skip if tmux isn't installed
 
 if [[ $(which tmux) ]]; then

@@ -1,4 +1,5 @@
 # .bashrc_special
 
+if [[ -f ~/.bash_aliases_special ]]; then source ~/.bash_tmux;fi
 if [[ -f ~/.bash_aliases ]]; then source ~/.bash_aliases;fi
 if [[ -f ~/.bash_aliases_special ]]; then source ~/.bash_aliases_special;fi
